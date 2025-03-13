@@ -1,12 +1,11 @@
 import WSLogo from '/logo.svg'
-import './App.css'
 
 function App() {
 
   return (
     <>
       <div>
-        <img src={WSLogo} className="logo" alt="Weather Shop logo" />
+        <img src={WSLogo} alt="Weather Shop logo" />
         <h1>Weather Shop</h1>
       </div>
       <p>
