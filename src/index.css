@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "Quicksand";
+    src: url(/fonts/Quicksand-VariableFont_wght.ttf);
+}
+
+:root{
+    --green: #ceddbf;
+    --blue: #3e7ef5;
+    --dark-green: #89bbc2;
+    --pastel-blue: #7ea4d1;
+}
+
+body{
+    margin: 0;
+    font-family: Quicksand;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--green);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    color: whitesmoke;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+header a{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--green);
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}

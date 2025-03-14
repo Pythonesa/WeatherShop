@@ -4,13 +4,13 @@ function App() {
 
   return (
     <>
-      <div>
-        <img src={WSLogo} alt="Weather Shop logo" />
-        <h1>Weather Shop</h1>
-      </div>
-      <p>
-        Próximamente la tienda para poder comprar su clima perfecto
-      </p>
+      <header>
+        <a href="index.html">
+          <img src={WSLogo} alt="Weather Shop Logo" />
+          <h1>Weather Shop</h1>
+        </a>
+        <nav>Inicio | Carrito | Login</nav>
+      </header>
     </>
   )
 }
