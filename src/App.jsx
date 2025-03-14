@@ -9,8 +9,37 @@ function App() {
           <img src={WSLogo} alt="Weather Shop Logo" />
           <h1>Weather Shop</h1>
         </a>
-        <nav>Inicio | Carrito | Login</nav>
+        <nav>
+          <img src="/img/nav/carrito-vacio.png" alt="Carrito de Compras vacío" />
+        </nav>
       </header>
+      <main>
+        <h2>¡Bienvenid@ a la tienda del clima definitiva, 100% real, no fake, un link mega!</h2>
+        <article className="cards">
+          <section className="card">
+            <div className='card-header'>
+              <img src='src/assets/arcoiris.png'></img>
+              <div>
+                <h3>Arcoíris</h3>
+                <p>$1500</p>
+                <button className='add-to-cart'>Agregar al carrito</button>
+              </div>
+            </div>
+            <p>Un arcoíris de colores variados y una olla de dinero al final.</p>
+          </section>
+          <section className="card">
+            <div className='card-header'>
+              <img src='src/assets/arcoiris.png'></img>
+              <div>
+                <h3>Arcoíris</h3>
+                <p>$1500</p>
+                <button className='add-to-cart'>Agregar al carrito</button>
+              </div>
+            </div>
+            <p>Un arcoíris de colores variados y una olla de dinero al final.</p>
+          </section>
+        </article>
+      </main>
     </>
   )
 }

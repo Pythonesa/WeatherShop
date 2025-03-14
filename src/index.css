@@ -47,3 +47,62 @@ header nav{
     font-size: 1.2rem;
     margin-right: 0.5rem;
 }
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--pastel-blue);
+    border-radius: 1rem;
+    box-shadow: var(--dark-green) 0px 5px 15px;
+}
+
+.card-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-to-cart{
+    background-color: var(--blue);
+    color: whitesmoke;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    box-shadow: var(--dark-green) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart:hover{
+    background-color: var(--dark-green);
+    color: var(--green);
+    transition: all 0.3s ease-in-out;
+}
+
+.add-to-cart:active{
+    background-color: var(--green);
+    color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
