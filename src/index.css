@@ -106,3 +106,24 @@ main{
     color: var(--blue);
     transition: all 0.3s ease-in-out;
 }
+
+#cart{
+    background-color: var(--dark-green);
+    color: black;
+    padding: 1rem;
+    border-radius: 0.1rem;
+    box-shadow: var(--blue) 0px 5px 15px;
+    position: absolute;
+    padding: 0.5rem;
+    top: 3rem;
+    right: 3rem;
+    display: none;
+}
+
+.cart-icon:hover + #cart {
+    display: block;
+}
+
+#cart:hover{
+    display: block;
+}

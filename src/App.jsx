@@ -10,7 +10,10 @@ function App() {
           <h1>Weather Shop</h1>
         </a>
         <nav>
-          <img src="/img/nav/carrito-vacio.png" alt="Carrito de Compras vacío" />
+          <img className='cart-icon' src="/img/nav/carrito-vacio.png" alt="Carrito de Compras vacío" />
+          <div id="cart">
+            <p>No has agregado nada al carrito</p>
+          </div>
         </nav>
       </header>
       <main>
@@ -18,7 +21,7 @@ function App() {
         <article className="cards">
           <section className="card">
             <div className='card-header'>
-              <img src='src/assets/arcoiris.png'></img>
+              <img src='img/arcoiris.png'></img>
               <div>
                 <h3>Arcoíris</h3>
                 <p>$1500</p>
@@ -29,7 +32,7 @@ function App() {
           </section>
           <section className="card">
             <div className='card-header'>
-              <img src='src/assets/arcoiris.png'></img>
+              <img src='img/arcoiris.png'></img>
               <div>
                 <h3>Arcoíris</h3>
                 <p>$1500</p>
