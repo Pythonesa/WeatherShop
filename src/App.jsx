@@ -1,21 +1,10 @@
-import WSLogo from '/logo.svg'
+import Header from "./components/Header"
 
 function App() {
 
   return (
     <>
-      <header>
-        <a href="index.html">
-          <img src={WSLogo} alt="Weather Shop Logo" />
-          <h1>Weather Shop</h1>
-        </a>
-        <nav>
-          <img className='cart-icon' src="/img/nav/carrito-vacio.png" alt="Carrito de Compras vacío" />
-          <div id="cart">
-            <p>No has agregado nada al carrito</p>
-          </div>
-        </nav>
-      </header>
+      <Header />
       <main>
         <h2>¡Bienvenid@ a la tienda del clima definitiva, 100% real, no fake, un link mega!</h2>
         <article className="cards">
