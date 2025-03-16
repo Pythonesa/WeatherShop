@@ -1,15 +1,15 @@
-export default function Card() {
+export default function Card({product}) {
   return (
     <section className="card">
       <div className="card-header">
-        <img src="img/arcoiris.png"></img>
+        <img src={`img/${product.image}.png`} alt={product.name}></img>
         <div>
-          <h3>Arcoíris</h3>
+          <h3>{product.name}</h3>
           <p>$1500</p>
           <button className="add-to-cart">Agregar al carrito</button>
         </div>
       </div>
-      <p>Un arcoíris de colores variados y una olla de dinero al final.</p>
+      <p>{product.description}</p>
     </section>
   );
 }

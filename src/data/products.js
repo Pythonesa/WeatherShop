@@ -65,7 +65,7 @@ export const products = [
   {
     id: 10,
     name: "Temperatura",
-    image: "termometro",
+    image: "temperatura",
     description: "Añade grados Celsius a tu compra y podrás hacer cosas locas como tener nieve a 30 grados.",
     price: 100
   }
