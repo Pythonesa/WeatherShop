@@ -1,3 +1,5 @@
+import Cart from "./Cart";
+
 export default function Header() {
   return (
     <header>
@@ -12,7 +14,7 @@ export default function Header() {
           alt="Carrito de Compras vacío"
         />
         <div id="cart">
-          <p>No has agregado nada al carrito</p>
+          <Cart />
         </div>
       </nav>
     </header>
