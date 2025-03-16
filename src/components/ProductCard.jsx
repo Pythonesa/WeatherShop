@@ -5,7 +5,7 @@ export default function Card({product}) {
         <img src={`img/${product.image}.png`} alt={product.name}></img>
         <div>
           <h3>{product.name}</h3>
-          <p>$1500</p>
+          <p>${product.price}</p>
           <button className="add-to-cart">Agregar al carrito</button>
         </div>
       </div>
