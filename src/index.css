@@ -84,7 +84,7 @@ main{
     gap: 1rem;
 }
 
-.add-to-cart{
+.add-to-cart, .emptyCart{
     background-color: var(--blue);
     color: whitesmoke;
     border: none;
@@ -101,7 +101,7 @@ main{
     transition: all 0.3s ease-in-out;
 }
 
-.add-to-cart:active{
+.add-to-cart:active, .emptyCart:hover{
     background-color: var(--green);
     color: var(--blue);
     transition: all 0.3s ease-in-out;
@@ -126,4 +126,58 @@ main{
 
 #cart:hover{
     display: block;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-table td{
+    text-align: center;
+}
+
+.cart-table th, .cart-table td{
+    padding: 0.5rem;
+}
+
+.addFromCart, .removeFromCart{
+    background-color: var(--blue);
+    color: whitesmoke;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 100%;
+    width: 2rem;
+    cursor: pointer;
+    box-shadow: var(--dark-green) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+    margin: 0.5rem;
+}
+
+.addFromCart:hover, .removeFromCart:hover{
+    background-color: var(--green);
+    color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
+
+.cart-table img{
+    height: 4rem;
+}
+
+.removeAllFromCart{
+    background-color: var(--blue);
+    color: rgb(244, 171, 171);
+    border: none;
+    padding: 0.5rem;
+    border-radius: 100%;
+    width: 2rem;
+    cursor: pointer;
+    box-shadow: var(--dark-green) 0px 5px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.removeAllFromCart:hover{
+    background-color: var(--green);
+    color: red;
+    transition: all 0.3s ease-in-out;
 }
