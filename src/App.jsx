@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header cart={cart}/>
       <main>
         <h2>
           ¡Bienvenid@ a la tienda del clima definitiva, 100% real, no fake, un
