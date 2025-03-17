@@ -7,6 +7,17 @@ function App() {
   const [productsData] = useState(products);
   const [cart, setCart] = useState([]);
 
+  function addToCart(product) {
+    const index = cart.findIndex((item) => item.id === product.id);
+    if (index >= 0) {
+      const newCart = [...cart];
+      newCart[index].quantity++;
+      setCart(newCart);
+    } else {
+      setCart([...cart, { ...product, quantity: 1 }]);
+    }
+  }
+
   return (
     <>
       <Header />
@@ -17,7 +28,11 @@ function App() {
         </h2>
         <article className="cards">
           {productsData.map((product) => (
-            <ProductCard key={product.id} product={product} setCart={setCart} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              addToCart={addToCart}
+            />
           ))}
         </article>
       </main>
