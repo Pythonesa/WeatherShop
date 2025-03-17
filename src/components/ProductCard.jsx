@@ -1,4 +1,4 @@
-export default function Card({product}) {
+export default function Card({ product, setCart }) {
   return (
     <section className="card">
       <div className="card-header">
@@ -6,7 +6,12 @@ export default function Card({product}) {
         <div>
           <h3>{product.name}</h3>
           <p>${product.price}</p>
-          <button className="add-to-cart">Agregar al carrito</button>
+          <button
+            className="add-to-cart"
+            onClick={() => setCart((prevCart) => [...prevCart, product])}
+          >
+            Agregar al carrito
+          </button>
         </div>
       </div>
       <p>{product.description}</p>
