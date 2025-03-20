@@ -31,12 +31,7 @@ function App() {
   }
 
   function removeAllFromCart(product) {
-    const index = cart.findIndex((item) => item.id === product.id);
-    if (index >= 0) {
-      const newCart = [...cart];
-      newCart.splice(index, 1);
-      setCart(newCart);
-    }
+    setCart(cart.filter((item) => item.id !== product.id));
   }
 
   function emptyCart() {
