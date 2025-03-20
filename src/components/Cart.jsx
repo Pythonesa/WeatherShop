@@ -1,5 +1,6 @@
 export default function Cart({ cart }) {
   if (cart.length >0) {
+    const total = cart.reduce((acc, product) => acc + product.price, 0);
     return (
       <>
         <table className="cart-table">
@@ -38,7 +39,7 @@ export default function Cart({ cart }) {
             ))}
           </tbody>
         </table>
-        <p className="totalCart">Total: $5000</p>
+        <p className="totalCart">Total: ${total}</p>
         <button type="button" className="emptyCart">
           Vaciar Carrito
         </button>
