@@ -7,6 +7,7 @@ export default function Card({ product, addToCart }) {
           <h3>{product.name}</h3>
           <p>${product.price}</p>
           <button
+            type="button"
             className="add-to-cart"
             onClick={() => addToCart(product)}
           >
