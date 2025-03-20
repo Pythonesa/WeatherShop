@@ -1,6 +1,12 @@
 import Cart from "./Cart";
 
-export default function Header({ cart }) {
+export default function Header({
+  cart,
+  removeFromCart,
+  addToCart,
+  removeAllFromCart,
+  emptyCart,
+}) {
   return (
     <header>
       <a href="index.html">
@@ -14,7 +20,13 @@ export default function Header({ cart }) {
           alt="Carrito de Compras vacío"
         />
         <div id="cart">
-          <Cart cart={cart} />
+          <Cart
+            cart={cart}
+            removeFromCart={removeFromCart}
+            addToCart={addToCart}
+            removeAllFromCart={removeAllFromCart}
+            emptyCart={emptyCart}
+          />
         </div>
       </nav>
     </header>

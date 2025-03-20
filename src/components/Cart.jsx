@@ -1,4 +1,4 @@
-export default function Cart({ cart }) {
+export default function Cart({ cart, removeFromCart, addToCart, removeAllFromCart, emptyCart }) {
   if (cart.length >0) {
     const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
     return (
@@ -22,16 +22,16 @@ export default function Cart({ cart }) {
                 <td>{product.name}</td>
                 <td>${product.price}</td>
                 <td>
-                  <button type="button" className="addFromCart">
+                  <button type="button" className="addFromCart" onClick={() => addToCart(product)}>
                     +
                   </button>
                   {product.quantity}
-                  <button type="button" className="removeFromCart">
+                  <button type="button" className="removeFromCart" onClick={() => removeFromCart(product)}>
                     -
                   </button>
                 </td>
                 <td>
-                  <button type="button" className="removeAllFromCart">
+                  <button type="button" className="removeAllFromCart" onClick={() => removeAllFromCart(product)}>
                     X
                   </button>
                 </td>
@@ -40,7 +40,7 @@ export default function Cart({ cart }) {
           </tbody>
         </table>
         <p className="totalCart">Total: ${total}</p>
-        <button type="button" className="emptyCart">
+        <button type="button" className="emptyCart" onClick={() => emptyCart()}>
           Vaciar Carrito
         </button>
       </>

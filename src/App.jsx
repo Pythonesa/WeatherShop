@@ -18,9 +18,40 @@ function App() {
     }
   }
 
+  function removeFromCart(product) {
+    const index = cart.findIndex((item) => item.id === product.id);
+    if (index >= 0) {
+      const newCart = [...cart];
+      newCart[index].quantity--;
+      if (newCart[index].quantity === 0) {
+        newCart.splice(index, 1);
+      }
+      setCart(newCart);
+    }
+  }
+
+  function removeAllFromCart(product) {
+    const index = cart.findIndex((item) => item.id === product.id);
+    if (index >= 0) {
+      const newCart = [...cart];
+      newCart.splice(index, 1);
+      setCart(newCart);
+    }
+  }
+
+  function emptyCart() {
+    setCart([]);
+  }
+
   return (
     <>
-      <Header cart={cart}/>
+      <Header
+        cart={cart}
+        removeFromCart={removeFromCart}
+        addToCart={addToCart}
+        removeAllFromCart={removeAllFromCart}
+        emptyCart={emptyCart}
+      />
       <main>
         <h2>
           ¡Bienvenid@ a la tienda del clima definitiva, 100% real, no fake, un
