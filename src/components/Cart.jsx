@@ -1,6 +1,6 @@
 export default function Cart({ cart }) {
   if (cart.length >0) {
-    const total = cart.reduce((acc, product) => acc + product.price, 0);
+    const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
     return (
       <>
         <table className="cart-table">
