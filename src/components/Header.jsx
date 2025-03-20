@@ -16,8 +16,10 @@ export default function Header({
       <nav>
         <img
           className="cart-icon"
-          src="/img/nav/carrito-vacio.png"
-          alt="Carrito de Compras vacío"
+          {...(cart.length > 0
+            ? { src: "/img/nav/carrito-cargado.png" }
+            : { src: "/img/nav/carrito-vacio.png" })}
+          alt="Carrito de Compras"
         />
         <div id="cart">
           <Cart
