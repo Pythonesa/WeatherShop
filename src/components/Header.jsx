@@ -6,7 +6,10 @@ export default function Header({
   addToCart,
   removeAllFromCart,
   emptyCart,
+  total,
+  isEmpty
 }) {
+
   return (
     <header>
       <a href="index.html">
@@ -16,9 +19,7 @@ export default function Header({
       <nav>
         <img
           className="cart-icon"
-          {...(cart.length > 0
-            ? { src: "/img/nav/carrito-cargado.png" }
-            : { src: "/img/nav/carrito-vacio.png" })}
+          src = { isEmpty ? "/img/nav/carrito-vacio.png" : "/img/nav/carrito-cargado.png"}
           alt="Carrito de Compras"
         />
         <div id="cart">
@@ -28,6 +29,8 @@ export default function Header({
             addToCart={addToCart}
             removeAllFromCart={removeAllFromCart}
             emptyCart={emptyCart}
+            total={total}
+            isEmpty={isEmpty}
           />
         </div>
       </nav>

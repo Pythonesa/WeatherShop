@@ -1,6 +1,13 @@
-export default function Cart({ cart, removeFromCart, addToCart, removeAllFromCart, emptyCart }) {
-  if (cart.length >0) {
-    const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
+export default function Cart({
+  cart,
+  removeFromCart,
+  addToCart,
+  removeAllFromCart,
+  emptyCart,
+  total,
+  isEmpty,
+}) {
+  if (!isEmpty) {
     return (
       <>
         <table className="cart-table">
@@ -22,16 +29,28 @@ export default function Cart({ cart, removeFromCart, addToCart, removeAllFromCar
                 <td>{product.name}</td>
                 <td>${product.price}</td>
                 <td>
-                  <button type="button" className="addFromCart" onClick={() => addToCart(product)}>
+                  <button
+                    type="button"
+                    className="addFromCart"
+                    onClick={() => addToCart(product)}
+                  >
                     +
                   </button>
                   {product.quantity}
-                  <button type="button" className="removeFromCart" onClick={() => removeFromCart(product)}>
+                  <button
+                    type="button"
+                    className="removeFromCart"
+                    onClick={() => removeFromCart(product)}
+                  >
                     -
                   </button>
                 </td>
                 <td>
-                  <button type="button" className="removeAllFromCart" onClick={() => removeAllFromCart(product)}>
+                  <button
+                    type="button"
+                    className="removeAllFromCart"
+                    onClick={() => removeAllFromCart(product)}
+                  >
                     X
                   </button>
                 </td>

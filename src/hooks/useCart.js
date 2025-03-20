@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { products } from "../data/products";
 
 export const useCart = () => {
@@ -43,5 +43,8 @@ export const useCart = () => {
     setCart([]);
   }
 
-  return { productsData, cart, addToCart, removeFromCart, removeAllFromCart, emptyCart };
+  const total = useMemo(() => cart.reduce((acc, product) => acc + product.price * product.quantity, 0), [cart]);
+  const isEmpty = useMemo(() => cart.length === 0, [cart]);
+
+  return { productsData, cart, addToCart, removeFromCart, removeAllFromCart, emptyCart, total, isEmpty };
 };

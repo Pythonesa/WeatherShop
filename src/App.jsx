@@ -11,6 +11,8 @@ function App() {
     removeFromCart,
     removeAllFromCart,
     emptyCart,
+    total,
+    isEmpty
   } = useCart();
 
   return (
@@ -21,6 +23,8 @@ function App() {
         addToCart={addToCart}
         removeAllFromCart={removeAllFromCart}
         emptyCart={emptyCart}
+        total={total}
+        isEmpty={isEmpty}
       />
       <main>
         <h2>
